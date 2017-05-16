@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Notify of unclean brew doctor status via Notification Center on Mac OS X
+#
+# Author: Jonas Friedmann
+# based on the work of Chris Streeter http://www.chrisstreeter.com
+#                  and Richard Woeber https://github.com/rwoeber
+
+eval $(/usr/libexec/path_helper -s)
+
+BREW=$(which brew)
+TERMINAL_NOTIFIER=$(which terminal-notifier)
+NOTIFIER_ARGS="-sender com.apple.Terminal"
+
+diagnosis=$(${BREW} doctor 2>&1 > /dev/null)
+
+if [ $? -ne 0 ]; then
+    title="Homebrew doctor anomalies detected!"
+    message=$(echo "${diagnosis}" | egrep "^[a-zA-Z]+:" -A1)
+    ${TERMINAL_NOTIFIER} ${NOTIFIER} -title "${title}" -message "${message}"
+    exit 1
+fi
+
+exit 0
