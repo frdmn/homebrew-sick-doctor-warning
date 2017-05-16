@@ -1,5 +1,7 @@
 # macOS Homebrew Sick Doctor Warning
 
+![](http://i.imgur.com/fLKR6Pw.png)
+
 A little script to announce [Homebrew](http://brew.sh/) doctor anomalies (`brew doctor) in the OS&thinsp;X Notification Center.
 
 ## Installation
