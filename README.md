@@ -18,7 +18,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.homebrew-sick-doctor-warning
 
 ## Manual Installation
 
-Updates are checked at login, 10:00 and 15:00. If you want to have the script run at other times, consider to manually install everything.
+Updates are checked at login, 10:01 and 15:01. If you want to have the script run at other times, consider to manually install everything.
 
 ### Prerequisites
 
