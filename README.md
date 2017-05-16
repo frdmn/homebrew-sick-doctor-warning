@@ -39,3 +39,7 @@ Download the script and place it in your environment path (how about `/usr/local
 ## Version
 
 1.0.0
+
+## License
+
+[MIT](LICENSE)
